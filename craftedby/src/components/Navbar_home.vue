@@ -1,25 +1,29 @@
 <template>
   <nav class="bg-custom-color p-4 flex justify-between items-center">
-    <!-- Logo de la empresa en el centro -->
+
     <div class="flex-grow flex justify-center">
-      <img src="@/assets/logo.png" alt="Logo" >
+      <a href="/">
+        <img src="@/assets/logo.png" alt="Logo">
+      </a>
     </div>
     <div class="flex space-x-4">
       <button class="text-gray-600 hover:text-red-600 focus:outline-none">
         <IconSearch  class="w-6 h-6"/>
       </button>
-      <router-link to="/create_account" class="text-gray-600 hover:text-red-600 focus:outline-none">
-        <button>
+      <router-link to="/sign_up" class="text-gray-600 hover:text-red-600 focus:outline-none">
+      <button>
           <IconUser class="w-6 h-6" />
         </button>
       </router-link>
+      <router-link to="/sign_up" class="text-gray-600 hover:text-red-600 focus:outline-none">
       <button class="text-gray-600 hover:text-red-600 focus:outline-none">
         <IconShoppingCart class="w-6 h-6" />
       </button>
+      </router-link>
     </div>
   </nav>
 
-  <nav class="bg-custom-color p-2 flex justify-center space-x-40">
+  <nav class="bg-custom-color p-5 flex flex-col md:flex-row justify-center md:space-x-60">
     <a href="/e-boutique" class="text-lg text-gray-600 hover:text-red-600 font-sacramento">e-boutique</a>
     <a href="/blog-artisan" class="text-lg text-gray-600 hover:text-red-600 font-sacramento">blog artisan</a>
   </nav>
@@ -28,8 +32,6 @@
 
 <script setup>
   import { IconSearch, IconUser, IconShoppingCart  } from '@tabler/icons-vue'
-  import { RouterLink } from 'vue-router'
-
 
 </script>
 

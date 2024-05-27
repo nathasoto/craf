@@ -31,7 +31,7 @@ import { IconBrandFacebook } from '@tabler/icons-vue';
 
       <div class=" bg-custom-color2 w-1/2 pl-8 p-8 rounded-lg " >
         <h3 class="text-3xl font-bold mb-3 font-sacramento">Newsletter</h3>
-        <h5 class="text-xxxxs mb-1 font-sacramento">Subscribe to our newsletter and receive our latest news and offers!</h5>
+        <h5 class=" mb-1 font-sacramento">Subscribe to our newsletter and receive our latest news and offers!</h5>
         <form @submit.prevent="submitNewsletter" class="flex flex-col">
           <div class="flex flex-wrap items-center">
             <input type="email" v-model="email" placeholder="  votre email" class="text-xxs p-0 border border-gray-300 rounded-l flex-grow mb-4 font-sacramento w-full sm:w-auto" required>

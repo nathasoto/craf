@@ -10,13 +10,38 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/create_account',
-      name: 'create_account',
+      path: '/e-boutique',
+      name: 'e-boutique',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Create_acount.vue')
-    }
+      component: () => import('../views/CatalogueView.vue')
+    },
+    {
+      path: '/sign_up',
+      name: 'sign_up',
+      component: () => import('../views/SignUpView.vue')
+    },
+    {
+      path: '/account',
+      name: 'account',
+      component: () => import('../views/AccountView.vue')
+    },
+    {
+      path: '/product',
+      name: 'product',
+      component: () => import('../views/SpecificationProductView.vue')
+    },
+    {
+      path: '/cart',
+      name: 'product',
+      component: () => import('../views/CartView.vue')
+    },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: () => import('../views/PaymentView.vue')
+    },
   ]
 })
 

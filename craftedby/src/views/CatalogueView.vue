@@ -5,12 +5,17 @@ import Footer_home from '@/components/Footer_home.vue'
 
 <template>
   <body>
-    <header><Navbar_home /></header>
+  <header>
+    <Navbar_home />
 
-    <main>
-      Home
-    </main>
+  </header>
 
-    <footer><Footer_home /></footer>
+  <main>
+    e-boutique
+  </main>
+
+  <footer>
+    <Footer_home />
+  </footer>
   </body>
 </template>

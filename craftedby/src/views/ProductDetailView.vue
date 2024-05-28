@@ -1,7 +1,8 @@
 <script setup>
 import Navbar_home from '@/components/navbar_home.vue'
 import Footer_home from '@/components/footer_home.vue'
-import CartList from '@/components/cartList.vue'
+import ProductDetail from '@/components/productDetail.vue'
+
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import CartList from '@/components/cartList.vue'
   </header>
 
   <main>
-    <CartList />
+    <ProductDetail />
   </main>
 
   <footer>

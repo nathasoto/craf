@@ -1,6 +1,8 @@
 <script setup>
-import Navbar_home from '@/components/Navbar_home.vue'
-import Footer_home from '@/components/Footer_home.vue'
+import Navbar_home from '@/components/navbar_home.vue'
+import Footer_home from '@/components/footer_home.vue'
+import Product from '@/components/product.vue'
+
 </script>
 
 <template>
@@ -11,8 +13,9 @@ import Footer_home from '@/components/Footer_home.vue'
   </header>
 
   <main>
-    e-boutique
+    <Product />
   </main>
+
 
   <footer>
     <Footer_home />

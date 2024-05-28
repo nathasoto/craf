@@ -1,6 +1,7 @@
-<script setup>
-import Navbar_home from '@/components/Navbar_home.vue'
-import Footer_home from '@/components/Footer_home.vue'
+<script setup lang="ts">
+import Navbar_home from '@/components/navbar_home.vue'
+import Footer_home from '@/components/footer_home.vue'
+import { PopoverArrow, PopoverClose, PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'radix-vue'
 </script>
 
 <template>
@@ -9,8 +10,36 @@ import Footer_home from '@/components/Footer_home.vue'
 
     <main>
       Home
+      <PopoverRoot>
+        <PopoverTrigger>More info</PopoverTrigger>
+        <PopoverPortal>
+          <PopoverContent>
+            Some more info...
+            <PopoverClose />
+            <PopoverArrow />
+          </PopoverContent>
+        </PopoverPortal>
+      </PopoverRoot>
     </main>
 
     <footer><Footer_home /></footer>
   </body>
 </template>
+
+<style>
+.PopoverTrigger {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.PopoverContent {
+  border-radius: 4px;
+  padding: 20px;
+  width: 260px;
+  background-color: white;
+}
+
+.PopoverArrow {
+  background-color: white;
+}
+</style>

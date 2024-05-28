@@ -28,9 +28,7 @@ const cartStore = useCartStore();
 const addToCart = () => {
   cartStore.addToCart({ id: product.value.id, title: product.value.title, price: product.value.price, quantity: quantity.value ,image:product.value.image });
 };
-const goBack = () => {
-  router.push('/e-boutique');
-};
+
 
 </script>
 
@@ -65,10 +63,6 @@ const goBack = () => {
           <!-- Botón "Ajouter au panier" -->
           <button @click="addToCart" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Ajouter au panier
-          </button>
-          <!-- Botón "Volver" -->
-          <button @click="goBack" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-4">
-            Volver
           </button>
         </div>
       </div>

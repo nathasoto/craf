@@ -17,9 +17,9 @@
     "json-fn": "^1.1.1",
     "pinia": "^2.1.7",
     "radix-vue": "^1.8.2",
-    "sjcl": "^1.0.8",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",

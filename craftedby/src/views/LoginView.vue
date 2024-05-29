@@ -1,6 +1,6 @@
 <script setup>
-import Navbar_home from '@/components/navbar_home.vue'
-import Footer_home from '@/components/footer_home.vue'
+import Navbar_home from '@/components/navbarHome.vue'
+import Footer_home from '@/components/footerHome.vue'
 import LoginForm from '@/components/loginForm.vue'
 </script>
 

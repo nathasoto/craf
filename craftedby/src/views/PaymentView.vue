@@ -1,6 +1,11 @@
 <script setup>
-import Navbar_home from '@/components/navbar_home.vue'
-import Footer_home from '@/components/footer_home.vue'
+import Navbar_home from '@/components/navbarHome.vue'
+import Footer_home from '@/components/footerHome.vue'
+import PaymentForm from '@/components/paymentForm.vue'
+
+
+const userName = localStorage.getItem('userName');
+
 </script>
 
 <template>
@@ -10,8 +15,11 @@ import Footer_home from '@/components/footer_home.vue'
 
   </header>
 
-  <main>
-    Pay
+  <main >
+  <PaymentForm />
+
+
+
   </main>
 
   <footer>

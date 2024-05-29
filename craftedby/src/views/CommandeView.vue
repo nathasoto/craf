@@ -1,9 +1,9 @@
 <script setup>
 import Navbar_home from '@/components/navbarHome.vue'
 import Footer_home from '@/components/footerHome.vue'
+import Commande from '@/components/commande.vue'
 
 
-const userName = localStorage.getItem('userName');
 
 </script>
 
@@ -14,9 +14,8 @@ const userName = localStorage.getItem('userName');
 
   </header>
 
-  <main class="p-4">
-    <h1 class="text-2xl mb-4">Bienvenue, {{ userName }}!</h1>
-
+  <main>
+    <commande />
   </main>
 
   <footer>

@@ -24,7 +24,6 @@ const handleSubmit = () => {
   }, 2000); // Wait 2 seconds before redirecting
 
 
-
 };
 
 </script>
@@ -56,7 +55,7 @@ const handleSubmit = () => {
     <button type="submit" class="mt-8 bg-blue-500 text-white py-2 px-4 rounded">Payer</button>
     <!-- Message shown when redirecting is true -->
     <div v-if="redirecting" class="bg-gray-200 p-3 rounded-lg mt-4">
-      Redirigiendo...
+      Redirection en cours...
     </div>
   </form>
 

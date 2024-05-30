@@ -33,11 +33,15 @@ export const useCartStore = defineStore({
   },
   actions: {
     // Add a product to the cart
-    addToCart(product) {
+    addToCart(product, userToken) {
       const existingProduct = this.items.find(item => item.id === product.id);
       if (existingProduct) {
         existingProduct.quantity += product.quantity;
       } else {
+        // Assign the user token to the product if available
+        if (userToken) {
+          product.userToken = userToken;
+        }
         this.items.push(product);
       }
       // Update the cart in localStorage and set the expiration date

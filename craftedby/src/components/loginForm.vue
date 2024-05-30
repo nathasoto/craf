@@ -1,23 +1,24 @@
 <script setup>
 import { ref } from 'vue';
+import { useUserStore } from '../stores/UserStore.js'; // Adjust the path as per your project structure
 import { useRouter } from 'vue-router';
 
 // Define reactive variables for the username and password
-const name = ref('');
+const username= ref('');
 const password = ref('');
 const router = useRouter();
 
+
 // Function to handle the login process
-const handleLogin = () => {
-  // Check if the username and password match predefined values
-  if (name.value === 'natha' && password.value === '1234') {
-    // Store the username in localStorage
-    localStorage.setItem('userName', name.value);
-    // Redirect to the account page
+const handleLogin = async () => {
+  try {
+    await useUserStore().loginUser({ username: username.value, password: password.value });
+
+    // Redirect to the account page upon successful login
     router.push('/account');
-  } else {
-    // Show an alert if the username or password is incorrect
-    alert('Incorrect username or password');
+  } catch (error) {
+    // Show an alert if there's an error during login
+    alert(error.message || 'An error occurred while logging in');
   }
 };
 </script>
@@ -30,7 +31,7 @@ const handleLogin = () => {
         <div class="mb-4">
           <!-- Label and input for the username -->
           <label for="name" class="block text-gray-700">Username</label>
-          <input type="text" id="name" v-model="name" required class="w-full px-3 py-2 border rounded" />
+          <input type="text" id="name" v-model="username" required class="w-full px-3 py-2 border rounded" />
         </div>
         <div class="mb-4">
           <!-- Label and input for the password -->

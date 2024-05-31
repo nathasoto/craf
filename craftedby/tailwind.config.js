@@ -7,9 +7,17 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        colorForm : '#FCF3EE',
+        colorText : '#2C3532',
+        colorLogo : '#E8403B',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 
 

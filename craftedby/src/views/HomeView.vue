@@ -1,26 +1,17 @@
 <script setup lang="ts">
-import Navbar_home from '@/components/navbarHome.vue'
+
 import Footer_home from '@/components/footerHome.vue'
-import NewNavBar from '@/components/newNavBar.vue'
-import { PopoverArrow, PopoverClose, PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'radix-vue'
+import NavbarHome from '@/components/navbar/navbarHome.vue'
+import Product from '@/components/product.vue'
+
+
 </script>
 
 <template>
   <body>
-    <header><Navbar_home /></header>
-
+    <header><NavbarHome /></header>
     <main>
-      Home
-      <PopoverRoot>
-        <PopoverTrigger>More info</PopoverTrigger>
-        <PopoverPortal>
-          <PopoverContent>
-            Some more info...
-            <PopoverClose />
-            <PopoverArrow />
-          </PopoverContent>
-        </PopoverPortal>
-      </PopoverRoot>
+      <Product />
     </main>
 
     <footer><Footer_home /></footer>

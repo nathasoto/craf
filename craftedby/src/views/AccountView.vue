@@ -1,6 +1,6 @@
 <script setup>
 import { watchEffect } from 'vue'
-import Navbar_home from '@/components/navbarHome.vue'
+import Navbar_home from '@/components/navbar/navbarHome.vue'
 import Footer_home from '@/components/footerHome.vue'
 import { useUserStore } from '../stores/UserStore.js';
 import Product from '@/components/product.vue'
